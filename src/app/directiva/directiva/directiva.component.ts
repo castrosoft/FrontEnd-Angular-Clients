@@ -12,6 +12,9 @@ export class DirectivaComponent implements OnInit {
   //Declaro un array
   listaCurso: string[] = ['Java', 'Go', 'Python', 'C#'];
 
+  //Flag para ver funcionamiento de NgIf
+  habilitar: boolean = true;
+
   ngOnInit(): void {
   }
 
