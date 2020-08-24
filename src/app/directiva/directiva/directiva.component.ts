@@ -15,6 +15,10 @@ export class DirectivaComponent implements OnInit {
   //Flag para ver funcionamiento de NgIf
   habilitar: boolean = true;
 
+  setHabilitar(): void {
+    this.habilitar = (this.habilitar==true)? false: true;
+  }
+
   ngOnInit(): void {
   }
 
