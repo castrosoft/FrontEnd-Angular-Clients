@@ -22,7 +22,21 @@ export class ClientesComponent implements OnInit {
   */
 
   ngOnInit(): void {
-    this.clientes = this.clienteService.getClientes();
+    //this.clientes = this.clienteService.getClientes();
+
+    this.clienteService.getClientes().subscribe(
+      (clientes) => this.clientes = clientes
+    );
+    
+//Version extendida de la funcion anterior
+    /*
+        this.clienteService.getClientes().subscribe(
+          function (clientes){
+            this.clientes = clientes
+          }
+        );
+    */
+
   }
 
 }
