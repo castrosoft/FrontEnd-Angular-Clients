@@ -10,6 +10,8 @@ import { ClientesComponent } from './clientes/clientes/clientes.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteService } from './clientes/clientes/cliente.service';
 
+import { HttpClientModule } from '@angular/common/http'
+
 const routes: Routes = [
   {path:'', redirectTo: '/clientes', pathMatch:'full'},
   {path:'directivas', component: DirectivaComponent},
@@ -26,6 +28,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
