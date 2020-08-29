@@ -62,4 +62,9 @@ private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   }
 
+
+  update(cliente: Cliente): Observable<Cliente>{
+    return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders})
+  }
+
 }
